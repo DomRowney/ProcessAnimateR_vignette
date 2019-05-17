@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558092917070.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B249DF9F",
+    "lastKnownWriteTime" : 1558093362,
+    "last_content_update" : 1558093348323,
+    "path" : "//ntpcts60.nntha.loc/shared_info/CSUs/NECS/Information Services/Analysis/Teams/Projects/Dominic/ProcessAnimateR_vignette/ProcessAnimateR_vignette.Rmd",
+    "project_path" : "ProcessAnimateR_vignette.Rmd",
+    "properties" : {
+        "cursorPosition" : "17,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

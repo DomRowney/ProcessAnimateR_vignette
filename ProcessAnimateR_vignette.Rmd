@@ -1,3 +1,29 @@
+---
+title: "User defined bins for time to change token aesthetics"
+author: "Dominic Rowney"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{User defined bins for time to change token aesthetics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+It is possible to change the aesthetics of tokens based on the timestamp of the animation
+
+For example, the number of days a 'patient' has been in the system
+
+
+```{r echo = TRUE, message = FALSE}
+
 # Libraries ---------------------------------------------------------------
 
 library(dplyr) ##pipes
@@ -7,7 +33,7 @@ library(bupaR) ##buisness process analytics
 library(processanimateR) ##animates process
 
 
-# Create performance times ------------------------------------------------
+# Create performance time flags ------------------------------------------------
 
 my_flags <- data.frame(value = c(0,2,4,8,16)) %>% 
   mutate(day = days(value))
@@ -19,8 +45,11 @@ my_timeflags <- patients %>%
   mutate(time = start_timestamp + day) %>% 
   filter(time <= complete_timestamp) %>% 
   select("case" = patient,time,value) ##must be case, time, value
+```
 
 
+
+```{r echo = TRUE, message = FALSE}
 # Animate process ---------------------------------------------------------
 
 patients %>%
@@ -33,3 +62,11 @@ patients %>%
                                         , domain = my_flags$value
                                         , range = rev(RColorBrewer::brewer.pal(5,"Spectral"))
                     )))
+
+
+
+```
+
+
+
+
