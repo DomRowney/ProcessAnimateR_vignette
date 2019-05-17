@@ -1,0 +1,7 @@
+{
+    "installOptions" : {
+        "installDependencies" : true,
+        "installFromRepository" : true,
+        "libraryPath" : "\\\\pdc-sys-fil-01.systems.informatix.loc/NECSU_Home/Dominic.Rowney/Documents/R/win-library/3.5"
+    }
+}

@@ -13,6 +13,8 @@ my_flags <- data.frame(value = c(0,2,4,8,16)) %>%
   mutate(day = days(value))
 
 
+# Create timestamps of flags ----------------------------------------------
+
 my_timeflags <- patients %>% 
   cases %>%
   crossing(my_flags) %>% 
